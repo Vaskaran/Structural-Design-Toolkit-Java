@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_8r-3QN1TEfCr1czWFVPn9Q" name="FPDemo1UML">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_86MSYN1TEfCr1czWFVPn9Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DmJ0EN1UEfCr1czWFVPn9Q" name="sdt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DqYMwN1UEfCr1czWFVPn9Q" name="facade">
+        <packagedElement xmi:type="uml:Package" xmi:id="_DqZa4N1UEfCr1czWFVPn9Q" name="demo1">
+          <packagedElement xmi:type="uml:Package" xmi:id="_DqaB8N1UEfCr1czWFVPn9Q" name="client">
+            <packagedElement xmi:type="uml:Class" xmi:id="_DqdsUN1UEfCr1czWFVPn9Q" name="FacadeDemo1">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DydKsN1UEfCr1czWFVPn9Q" name="main" specification="_DxXlkN1UEfCr1czWFVPn9Q">
+                <language>JAVA</language>
+                <body>&#xD;
+    System.out.println(&quot;***Simplifying the usage of a complex system using a facade.***&quot;);&#xD;
+    // Using a facade&#xD;
+    LoanApprover loanApprover = new LoanApprover();&#xD;
+    // Person-1&#xD;
+    Person person = new Person(&quot;Bob&quot;, 5000, true);&#xD;
+    checkEligibility(person, 20000, loanApprover);&#xD;
+    System.out.println(&quot;--------&quot;);&#xD;
+    // Person-2&#xD;
+    person = new Person(&quot;Jack&quot;, 70000, false);&#xD;
+    checkEligibility(person, 30000, loanApprover);&#xD;
+    System.out.println(&quot;--------&quot;);&#xD;
+    // Person-3&#xD;
+    person = new Person(&quot;Tony&quot;, 125000, true);&#xD;
+    checkEligibility(person, 125000, loanApprover);&#xD;
+    System.out.println(&quot;--------&quot;);&#xD;
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DzPN0N1UEfCr1czWFVPn9Q" name="checkEligibility" specification="_DzE1wN1UEfCr1czWFVPn9Q">
+                <language>JAVA</language>
+                <body>&#xD;
+    String approvalStatus = approver.checkLoanEligibility(person, claimAmount);&#xD;
+    System.out.println(person.getName() + &quot;'s application status:&quot; + approvalStatus);&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_DxXlkN1UEfCr1czWFVPn9Q" name="main" visibility="public" isStatic="true" method="_DydKsN1UEfCr1czWFVPn9Q">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Dx-pkN1UEfCr1czWFVPn9Q" name="args" type="_DqjL4N1UEfCr1czWFVPn9Q">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DyBF0N1UEfCr1czWFVPn9Q"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DyCT8N1UEfCr1czWFVPn9Q" value="*"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_DzE1wN1UEfCr1czWFVPn9Q" name="checkEligibility" visibility="private" isStatic="true" method="_DzPN0N1UEfCr1czWFVPn9Q">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzHSAN1UEfCr1czWFVPn9Q" name="person"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzJuQN1UEfCr1czWFVPn9Q" name="claimAmount" type="_DzDnoN1UEfCr1czWFVPn9Q"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzMxkN1UEfCr1czWFVPn9Q" name="approver" type="_DzEOsN1UEfCr1czWFVPn9Q"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_5z3lMN1UEfCr1czWFVPn9Q" client="_8r-3QN1TEfCr1czWFVPn9Q" supplier="_DzEOsN1UEfCr1czWFVPn9Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DzEOsN1UEfCr1czWFVPn9Q" name="LoanApprover" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_D0CfEN1UEfCr1czWFVPn9Q" name="asset" visibility="private" isLeaf="true" type="_DzXwsN1UEfCr1czWFVPn9Q" isUnique="false"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_D0DtMN1UEfCr1czWFVPn9Q" name="existingLoanStatus" visibility="private" isLeaf="true" type="_DzrSsN1UEfCr1czWFVPn9Q" isUnique="false"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D0XPMN1UEfCr1czWFVPn9Q" name="LoanApprover" specification="_D0GJcN1UEfCr1czWFVPn9Q">
+              <language>JAVA</language>
+              <body>&#xD;
+    asset = new Asset();&#xD;
+    existingLoanStatus = new ExistingLoanStatus();&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D0jccN1UEfCr1czWFVPn9Q" name="checkLoanEligibility" specification="_D0cHsN1UEfCr1czWFVPn9Q">
+              <language>JAVA</language>
+              <body>&#xD;
+    String status = &quot;Approved&quot;;&#xD;
+    String reason = &quot;&quot;;&#xD;
+    System.out.println(&quot;\nChecking the loan approval status of  a person...&quot;);&#xD;
+    System.out.println(person + &quot; Claims: $&quot; + claimAmount);&#xD;
+    if (!asset.hasSufficientAssetValue(person, claimAmount)) {&#xD;
+        status = &quot;Not approved.&quot;;&#xD;
+        reason += &quot;\nInsufficient balance.&quot;;&#xD;
+    }&#xD;
+    if (existingLoanStatus.hasPreviousLoans(person)) {&#xD;
+        status = &quot;Not approved.&quot;;&#xD;
+        reason += &quot;\nOld loan exists.&quot;;&#xD;
+    }&#xD;
+    String result = status;&#xD;
+    if (!status.equals(&quot;Approved&quot;)) {&#xD;
+        // Collecting the remarks (if any).&#xD;
+        result = status + &quot; Reason(s):&quot; + reason;&#xD;
+    }&#xD;
+    return result;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_D0GJcN1UEfCr1czWFVPn9Q" name="LoanApprover" visibility="public" method="_D0XPMN1UEfCr1czWFVPn9Q"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_D0cHsN1UEfCr1czWFVPn9Q" name="checkLoanEligibility" visibility="public" method="_D0jccN1UEfCr1czWFVPn9Q">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_D0fyEN1UEfCr1czWFVPn9Q" type="_DqjL4N1UEfCr1czWFVPn9Q" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_D0hnQN1UEfCr1czWFVPn9Q" name="person"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_D0iOUN1UEfCr1czWFVPn9Q" name="claimAmount" type="_DzDnoN1UEfCr1czWFVPn9Q"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DzXwsN1UEfCr1czWFVPn9Q" name="Asset">
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DznoUN1UEfCr1czWFVPn9Q" name="hasSufficientAssetValue" specification="_DzZl4N1UEfCr1czWFVPn9Q">
+              <language>JAVA</language>
+              <body>&#xD;
+    System.out.println(&quot;Verifying &quot; + person.getName() + &quot;'s asset value.&quot;);&#xD;
+    return person.getAssetValue() >= claimAmount;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_DzZl4N1UEfCr1czWFVPn9Q" name="hasSufficientAssetValue" visibility="public" method="_DznoUN1UEfCr1czWFVPn9Q">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzfsgN1UEfCr1czWFVPn9Q" type="_DzbbEN1UEfCr1czWFVPn9Q" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_DziIwN1UEfCr1czWFVPn9Q" name="person"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzlMEN1UEfCr1czWFVPn9Q" name="claimAmount" type="_DzDnoN1UEfCr1czWFVPn9Q"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DzrSsN1UEfCr1czWFVPn9Q" name="ExistingLoanStatus">
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Dz2R0N1UEfCr1czWFVPn9Q" name="hasPreviousLoans" specification="_DztH4N1UEfCr1czWFVPn9Q">
+              <language>JAVA</language>
+              <body>&#xD;
+    System.out.println(&quot;Verifying &quot; + person.getName() + &quot;'s previous loan(s) status.&quot;);&#xD;
+    return person.isPreviousLoanExist();&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_DztH4N1UEfCr1czWFVPn9Q" name="hasPreviousLoans" visibility="public" method="_Dz2R0N1UEfCr1czWFVPn9Q">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzwLMN1UEfCr1czWFVPn9Q" type="_DzbbEN1UEfCr1czWFVPn9Q" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_DzzOgN1UEfCr1czWFVPn9Q" name="person"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_wgHLIN2yEfCr1czWFVPn9Q" client="_DzEOsN1UEfCr1czWFVPn9Q" supplier="_DzXwsN1UEfCr1czWFVPn9Q"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_y8K94N2yEfCr1czWFVPn9Q" client="_DzEOsN1UEfCr1czWFVPn9Q" supplier="_DzrSsN1UEfCr1czWFVPn9Q"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DqgvoN1UEfCr1czWFVPn9Q" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Dqh9wN1UEfCr1czWFVPn9Q" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Dqik0N1UEfCr1czWFVPn9Q" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DqjL4N1UEfCr1czWFVPn9Q" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DzBLYN1UEfCr1czWFVPn9Q" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DzDAkN1UEfCr1czWFVPn9Q" name="primitivetype">
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_DzDnoN1UEfCr1czWFVPn9Q" name="Double"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_DzbbEN1UEfCr1czWFVPn9Q" name="Boolean"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DohLkN1UEfCr1czWFVPn9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Don5QN1UEfCr1czWFVPn9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DpRZgN1UEfCr1czWFVPn9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DpSAkN1UEfCr1czWFVPn9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DpifQN1UEfCr1czWFVPn9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DpjGUN1UEfCr1czWFVPn9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:External xmi:id="_DxOboN1UEfCr1czWFVPn9Q" name="java.lang.String" base_Classifier="_DqjL4N1UEfCr1czWFVPn9Q"/>
+  <standard:Create xmi:id="_D0S9wN1UEfCr1czWFVPn9Q" base_BehavioralFeature="_D0GJcN1UEfCr1czWFVPn9Q"/>
+</xmi:XMI>

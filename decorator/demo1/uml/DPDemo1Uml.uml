@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_CGfvILe4EfCkp-wnwWOGBg" name="DPDemo1Uml">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_CICAMLe4EfCkp-wnwWOGBg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_wNZX4Le9EfCkp-wnwWOGBg" name="cwp">
+      <packagedElement xmi:type="uml:Package" xmi:id="_wQGGkLe9EfCkp-wnwWOGBg" name="decorator">
+        <packagedElement xmi:type="uml:Package" xmi:id="_wQGtoLe9EfCkp-wnwWOGBg" name="addon">
+          <packagedElement xmi:type="uml:Class" xmi:id="_wQIi0Le9EfCkp-wnwWOGBg" name="Gym" visibility="public">
+            <generalization xmi:type="uml:Generalization" xmi:id="_wQJJ4be9EfCkp-wnwWOGBg" general="_wQJJ4Le9EfCkp-wnwWOGBg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUAWMLe9EfCkp-wnwWOGBg" name="Gym" specification="_wQKYALe9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    super(home);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUCycLe9EfCkp-wnwWOGBg" name="create" specification="_wUCLYLe9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    super.create();&#xD;
+    System.out.println(&quot;A gym is ready.&quot;);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wQKYALe9EfCkp-wnwWOGBg" name="Gym" visibility="public" method="_wUAWMLe9EfCkp-wnwWOGBg">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_wT_vILe9EfCkp-wnwWOGBg" name="home" type="_waIzYLe9EfCkp-wnwWOGBg"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wUCLYLe9EfCkp-wnwWOGBg" name="create" visibility="public" method="_wUCycLe9EfCkp-wnwWOGBg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_wQJJ4Le9EfCkp-wnwWOGBg" name="Luxury" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_wUFOsLe9EfCkp-wnwWOGBg" general="_wQJw8be9EfCkp-wnwWOGBg"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_wUFOsbe9EfCkp-wnwWOGBg" name="home" visibility="protected" type="_wQJw8be9EfCkp-wnwWOGBg" isUnique="false"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUNKgLe9EfCkp-wnwWOGBg" name="Luxury" specification="_wUF1wLe9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    this.home = home;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUNxkLe9EfCkp-wnwWOGBg" name="create" specification="_wUNKgbe9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    home.create();&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wUF1wLe9EfCkp-wnwWOGBg" name="Luxury" visibility="public" method="_wUNKgLe9EfCkp-wnwWOGBg">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_wUMjcLe9EfCkp-wnwWOGBg" name="home" type="_wQJw8be9EfCkp-wnwWOGBg"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wUNKgbe9EfCkp-wnwWOGBg" name="create" visibility="public" method="_wUNxkLe9EfCkp-wnwWOGBg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_wUPmwLe9EfCkp-wnwWOGBg" name="SwimmingPool" visibility="public">
+            <generalization xmi:type="uml:Generalization" xmi:id="_wUQN0Le9EfCkp-wnwWOGBg" general="_wQJJ4Le9EfCkp-wnwWOGBg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUXikLe9EfCkp-wnwWOGBg" name="SwimmingPool" specification="_wUQN0be9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    super(home);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUZXwbe9EfCkp-wnwWOGBg" name="create" specification="_wUZXwLe9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    super.create();&#xD;
+    System.out.println(&quot;One swimming pool is made.&quot;);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wUQN0be9EfCkp-wnwWOGBg" name="SwimmingPool" visibility="public" method="_wUXikLe9EfCkp-wnwWOGBg">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_wUW7gLe9EfCkp-wnwWOGBg" name="home" type="_wQJw8be9EfCkp-wnwWOGBg"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wUZXwLe9EfCkp-wnwWOGBg" name="create" visibility="public" method="_wUZXwbe9EfCkp-wnwWOGBg"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_wQJw8Le9EfCkp-wnwWOGBg" name="common">
+          <packagedElement xmi:type="uml:Class" xmi:id="_wQJw8be9EfCkp-wnwWOGBg" name="Home"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_wUdpMLe9EfCkp-wnwWOGBg" name="BasicHome" visibility="public">
+            <generalization xmi:type="uml:Generalization" xmi:id="_wUeQQLe9EfCkp-wnwWOGBg" general="_wQJw8be9EfCkp-wnwWOGBg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wUeQQre9EfCkp-wnwWOGBg" name="create" specification="_wUeQQbe9EfCkp-wnwWOGBg">
+              <language>JAVA</language>
+              <body>&#xD;
+    System.out.println(&quot;A home with some basic facilities is made.&quot;);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_wUeQQbe9EfCkp-wnwWOGBg" name="create" visibility="public" method="_wUeQQre9EfCkp-wnwWOGBg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_waIzYLe9EfCkp-wnwWOGBg" name="Home" visibility="public">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_waKBgLe9EfCkp-wnwWOGBg" name="create" visibility="private"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wPSOQLe9EfCkp-wnwWOGBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wPS1ULe9EfCkp-wnwWOGBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wPzysLe9EfCkp-wnwWOGBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wP1A0Le9EfCkp-wnwWOGBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wQCcMLe9EfCkp-wnwWOGBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wQDDQLe9EfCkp-wnwWOGBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_wT9S4Le9EfCkp-wnwWOGBg" base_BehavioralFeature="_wQKYALe9EfCkp-wnwWOGBg"/>
+  <standard:Create xmi:id="_wULVULe9EfCkp-wnwWOGBg" base_BehavioralFeature="_wUF1wLe9EfCkp-wnwWOGBg"/>
+  <standard:Create xmi:id="_wUVGULe9EfCkp-wnwWOGBg" base_BehavioralFeature="_wUQN0be9EfCkp-wnwWOGBg"/>
+</xmi:XMI>

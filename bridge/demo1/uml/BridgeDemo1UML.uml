@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_DxlykN_GEfCD06gnSjvPiA" name="BridgeDemo1UML">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_D6srQN_GEfCD06gnSjvPiA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_WkSckN_GEfCD06gnSjvPiA" name="sdt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_WosbcN_GEfCD06gnSjvPiA" name="bridge">
+        <packagedElement xmi:type="uml:Package" xmi:id="_WotpkN_GEfCD06gnSjvPiA" name="demo1">
+          <packagedElement xmi:type="uml:Package" xmi:id="_Wotpkd_GEfCD06gnSjvPiA" name="abstractions">
+            <packagedElement xmi:type="uml:Class" xmi:id="_Wox7AN_GEfCD06gnSjvPiA" name="ElectronicItem" visibility="public" isAbstract="true">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_Wo5PwN_GEfCD06gnSjvPiA" name="price" visibility="protected" isUnique="false"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Wv7E0N_GEfCD06gnSjvPiA" name="ElectronicItem" specification="_WpEO4N_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    this.price = price;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WwuWEN_GEfCD06gnSjvPiA" name="getFinalPrice" specification="_Wwo2gN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    return price.getPrice(getPrintedPrice());&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_WpEO4N_GEfCD06gnSjvPiA" name="ElectronicItem" visibility="protected" method="_Wv7E0N_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WvpYAN_GEfCD06gnSjvPiA" name="price"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Wv-vMN_GEfCD06gnSjvPiA" name="getPrintedPrice" visibility="protected" isAbstract="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WwlzMN_GEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Wwo2gN_GEfCD06gnSjvPiA" name="getFinalPrice" visibility="public" method="_WwuWEN_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WwrSwN_GEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Ww0csN_GEfCD06gnSjvPiA" name="Mobile" visibility="public">
+              <generalization xmi:type="uml:Generalization" xmi:id="_Ww1q0N_GEfCD06gnSjvPiA" general="_Wox7AN_GEfCD06gnSjvPiA"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_Ww4uIN_GEfCD06gnSjvPiA" name="printedPrice" visibility="private" type="_Wwj-AN_GEfCD06gnSjvPiA" isUnique="false"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WxNeQN_GEfCD06gnSjvPiA" name="Mobile" specification="_Ww7KYN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    super(scheme);&#xD;
+    this.printedPrice = printedPrice;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WxPTcN_GEfCD06gnSjvPiA" name="getPrintedPrice" specification="_WxOFUN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    return printedPrice;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Ww7KYN_GEfCD06gnSjvPiA" name="Mobile" visibility="public" method="_WxNeQN_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WxLCAN_GEfCD06gnSjvPiA" name="scheme"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WxMQIN_GEfCD06gnSjvPiA" name="printedPrice" type="_Wwj-AN_GEfCD06gnSjvPiA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_WxOFUN_GEfCD06gnSjvPiA" name="getPrintedPrice" visibility="protected" method="_WxPTcN_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WxOFUd_GEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_WxTk4N_GEfCD06gnSjvPiA" name="Television" visibility="public">
+              <generalization xmi:type="uml:Generalization" xmi:id="_WxWoMN_GEfCD06gnSjvPiA" general="_Wox7AN_GEfCD06gnSjvPiA"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_WxZrgN_GEfCD06gnSjvPiA" name="printedPrice" visibility="private" type="_Wwj-AN_GEfCD06gnSjvPiA" isUnique="false"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Wx2-gN_GEfCD06gnSjvPiA" name="Television" specification="_WxekAN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    super(scheme);&#xD;
+    this.printedPrice = printedPrice;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Wx8eEN_GEfCD06gnSjvPiA" name="getPrintedPrice" specification="_Wx4MoN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    return printedPrice;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_WxekAN_GEfCD06gnSjvPiA" name="Television" visibility="public" method="_Wx2-gN_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WxyGAN_GEfCD06gnSjvPiA" name="scheme"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Wx1JUN_GEfCD06gnSjvPiA" name="printedPrice" type="_Wwj-AN_GEfCD06gnSjvPiA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Wx4MoN_GEfCD06gnSjvPiA" name="getPrintedPrice" visibility="protected" method="_Wx8eEN_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_Wx4zsN_GEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_Wo2McN_GEfCD06gnSjvPiA" name="implementations">
+            <packagedElement xmi:type="uml:Class" xmi:id="_XABWUN_GEfCD06gnSjvPiA" name="ShowroomPrice" visibility="public">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_XAeCQN_GEfCD06gnSjvPiA" name="getPrice" specification="_XAXUkN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    // no discount&#xD;
+    return printedPrice;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_XAXUkN_GEfCD06gnSjvPiA" name="getPrice" visibility="public" method="_XAeCQN_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_XAZJwN_GEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_XAa-8N_GEfCD06gnSjvPiA" name="printedPrice" type="_Wwj-AN_GEfCD06gnSjvPiA"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_xitx4N_GEfCD06gnSjvPiA" name="OnlinePrice" visibility="public">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_xjd_0N_GEfCD06gnSjvPiA" name="getPrice" specification="_xjWEAN_GEfCD06gnSjvPiA">
+                <language>JAVA</language>
+                <body>&#xD;
+    // with 10% discount&#xD;
+    return printedPrice * 0.9;&#xD;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_xjWEAN_GEfCD06gnSjvPiA" name="getPrice" visibility="public" method="_xjd_0N_GEfCD06gnSjvPiA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xjX5MN_GEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_xjdYwN_GEfCD06gnSjvPiA" name="printedPrice" type="_Wwj-AN_GEfCD06gnSjvPiA"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_AvnZ4N_HEfCD06gnSjvPiA" name="PricingScheme" visibility="public">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Avp2IN_HEfCD06gnSjvPiA" name="getPrice" visibility="private">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_AvsSYN_HEfCD06gnSjvPiA" type="_Wwj-AN_GEfCD06gnSjvPiA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_AvxK4N_HEfCD06gnSjvPiA" name="printedPrice" type="_Wwj-AN_GEfCD06gnSjvPiA"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Realization" xmi:id="_FFMTAN_HEfCD06gnSjvPiA" client="_xitx4N_GEfCD06gnSjvPiA" supplier="_AvnZ4N_HEfCD06gnSjvPiA"/>
+            <packagedElement xmi:type="uml:Realization" xmi:id="_HawcMN_HEfCD06gnSjvPiA" client="_XABWUN_GEfCD06gnSjvPiA" supplier="_AvnZ4N_HEfCD06gnSjvPiA"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_WwhhwN_GEfCD06gnSjvPiA" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_WwjW8N_GEfCD06gnSjvPiA" name="primitivetype">
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Wwj-AN_GEfCD06gnSjvPiA" name="Double"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Li5WQN_HEfCD06gnSjvPiA"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_WmsQUN_GEfCD06gnSjvPiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WmxI0N_GEfCD06gnSjvPiA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_WnhWwN_GEfCD06gnSjvPiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Wnh90N_GEfCD06gnSjvPiA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Wn1f0N_GEfCD06gnSjvPiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Wn2G4N_GEfCD06gnSjvPiA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_WviqUN_GEfCD06gnSjvPiA" base_BehavioralFeature="_WpEO4N_GEfCD06gnSjvPiA"/>
+  <standard:Create xmi:id="_WxGwkN_GEfCD06gnSjvPiA" base_BehavioralFeature="_Ww7KYN_GEfCD06gnSjvPiA"/>
+  <standard:Create xmi:id="_WxrYUN_GEfCD06gnSjvPiA" base_BehavioralFeature="_WxekAN_GEfCD06gnSjvPiA"/>
+</xmi:XMI>

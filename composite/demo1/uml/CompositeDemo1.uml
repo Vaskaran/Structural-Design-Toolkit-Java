@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_UIVJcOOVEfCe79okyR0BGw" name="CompositeDemo1">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_UTTDUOOVEfCe79okyR0BGw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_b69_UOOVEfCe79okyR0BGw" name="sdt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_b_LJ4OOVEfCe79okyR0BGw" name="composite">
+        <packagedElement xmi:type="uml:Package" xmi:id="_b_NmIOOVEfCe79okyR0BGw" name="demo">
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_b_RQgOOVEfCe79okyR0BGw" name="Color" visibility="public">
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_b_UT0OOVEfCe79okyR0BGw" name="COLOR"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_b_WJAOOVEfCe79okyR0BGw" name="BW"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_b_mnsOOVEfCe79okyR0BGw" name="GiftPack" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_b_3tcOOVEfCe79okyR0BGw" name="items" visibility="private" isLeaf="true" type="_b_suUOOVEfCe79okyR0BGw" isUnique="false">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b_6wwOOVEfCe79okyR0BGw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b_7-4OOVEfCe79okyR0BGw" value="*"/>
+              <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_b_8l8OOVEfCe79okyR0BGw" name="defaultValue">
+                <language>JAVA</language>
+                <body>new ArrayList&lt;Item>()</body>
+              </defaultValue>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b_zcAOOVEfCe79okyR0BGw" client="_b_mnsOOVEfCe79okyR0BGw" supplier="_b_suUOOVEfCe79okyR0BGw" contract="_b_suUOOVEfCe79okyR0BGw"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cAhNsOOVEfCe79okyR0BGw" name="add" specification="_cAL2gOOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    items.add(item);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cAmtQOOVEfCe79okyR0BGw" name="remove" specification="_cAkRAOOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    items.remove(item);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cBPmcOOVEfCe79okyR0BGw" name="price" specification="_cAn7YOOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    double priceTotal = 0;&#xD;
+    for (Item item : items) {&#xD;
+        priceTotal += item.price();&#xD;
+    }&#xD;
+    return priceTotal;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cAL2gOOVEfCe79okyR0BGw" name="add" visibility="public" method="_cAhNsOOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cAXcsOOVEfCe79okyR0BGw" name="item" type="_b_suUOOVEfCe79okyR0BGw"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cAkRAOOVEfCe79okyR0BGw" name="remove" visibility="public" method="_cAmtQOOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cAmGMOOVEfCe79okyR0BGw" name="item" type="_b_suUOOVEfCe79okyR0BGw"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cAn7YOOVEfCe79okyR0BGw" name="price" visibility="public" method="_cBPmcOOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cBNKMOOVEfCe79okyR0BGw" type="_cBLVAeOVEfCe79okyR0BGw" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_b_suUOOVEfCe79okyR0BGw" name="Item" visibility="public">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cBVtEOOVEfCe79okyR0BGw" name="price" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cBW7MOOVEfCe79okyR0BGw" type="_cBLVAeOVEfCe79okyR0BGw" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_cBbzsOOVEfCe79okyR0BGw" name="Pen" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_cBeP8OOVEfCe79okyR0BGw" name="color" visibility="private" isLeaf="true" type="_b_RQgOOVEfCe79okyR0BGw" isUnique="false"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cBdB0OOVEfCe79okyR0BGw" client="_cBbzsOOVEfCe79okyR0BGw" supplier="_b_suUOOVEfCe79okyR0BGw" contract="_b_suUOOVEfCe79okyR0BGw"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cIMjAOOVEfCe79okyR0BGw" name="Pen" specification="_cBeP8eOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    this.color = color;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cISCkOOVEfCe79okyR0BGw" name="price" specification="_cIOYMOOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    if (color == Color.BW) {&#xD;
+        return 15;&#xD;
+    } else {&#xD;
+        return 30;&#xD;
+    }&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cBeP8eOVEfCe79okyR0BGw" name="Pen" visibility="public" method="_cIMjAOOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cIEnMOOVEfCe79okyR0BGw" name="color" type="_b_RQgOOVEfCe79okyR0BGw"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cIOYMOOVEfCe79okyR0BGw" name="price" visibility="public" method="_cISCkOOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cIO_QOOVEfCe79okyR0BGw" type="_cBLVAeOVEfCe79okyR0BGw" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_cIcaoOOVEfCe79okyR0BGw" name="Pencil" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_cIgsEOOVEfCe79okyR0BGw" name="color" visibility="private" isLeaf="true" type="_b_RQgOOVEfCe79okyR0BGw" isUnique="false"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cIeP0OOVEfCe79okyR0BGw" client="_cIcaoOOVEfCe79okyR0BGw" supplier="_b_suUOOVEfCe79okyR0BGw" contract="_b_suUOOVEfCe79okyR0BGw"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cI01IOOVEfCe79okyR0BGw" name="Pencil" specification="_cIkWcOOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    this.color = color;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_cI8w8OOVEfCe79okyR0BGw" name="price" specification="_cI3RYOOVEfCe79okyR0BGw">
+              <language>JAVA</language>
+              <body>&#xD;
+    if (color == Color.BW) {&#xD;
+        return 2.5;&#xD;
+    } else {&#xD;
+        return 10;&#xD;
+    }&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cIkWcOOVEfCe79okyR0BGw" name="Pencil" visibility="public" method="_cI01IOOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cIxx0OOVEfCe79okyR0BGw" name="color" type="_b_RQgOOVEfCe79okyR0BGw"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_cI3RYOOVEfCe79okyR0BGw" name="price" visibility="public" method="_cI8w8OOVEfCe79okyR0BGw">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_cI5GkOOVEfCe79okyR0BGw" type="_cBLVAeOVEfCe79okyR0BGw" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_cBKt8OOVEfCe79okyR0BGw" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_cBLVAOOVEfCe79okyR0BGw" name="primitivetype">
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_cBLVAeOVEfCe79okyR0BGw" name="Double"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fSHE0OOWEfCe79okyR0BGw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_a8yGgOOaEfCe79okyR0BGw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_c3xzkOOaEfCe79okyR0BGw"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b9UvwOOVEfCe79okyR0BGw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b9ZoQOOVEfCe79okyR0BGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b-KdQOOVEfCe79okyR0BGw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b-M5gOOVEfCe79okyR0BGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_b-f0cOOVEfCe79okyR0BGw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b-hCkOOVEfCe79okyR0BGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_cIAVwOOVEfCe79okyR0BGw" base_BehavioralFeature="_cBeP8eOVEfCe79okyR0BGw"/>
+  <standard:Create xmi:id="_cItgYOOVEfCe79okyR0BGw" base_BehavioralFeature="_cIkWcOOVEfCe79okyR0BGw"/>
+</xmi:XMI>

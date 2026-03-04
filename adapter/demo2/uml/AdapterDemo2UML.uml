@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_wRU9wOkiEfCNzpjub2m_HA" name="AdapterDemo2UML">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_wTwmsOkiEfCNzpjub2m_HA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3aAQoOkiEfCNzpjub2m_HA" name="sdt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_3c3XYOkiEfCNzpjub2m_HA" name="adapter">
+        <packagedElement xmi:type="uml:Package" xmi:id="_3c3-cOkiEfCNzpjub2m_HA" name="common">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3c6asOkiEfCNzpjub2m_HA" name="Person" visibility="public" isAbstract="true">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3hDT0OkiEfCNzpjub2m_HA" name="name" visibility="protected" type="_3dDkoekiEfCNzpjub2m_HA" isUnique="false"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3hUZkOkiEfCNzpjub2m_HA" name="age" visibility="protected" type="_3hTLcekiEfCNzpjub2m_HA" isUnique="false"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3hXc4OkiEfCNzpjub2m_HA" name="id" visibility="protected" type="_3dDkoekiEfCNzpjub2m_HA" isUnique="false"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_3c8P4OkiEfCNzpjub2m_HA" client="_3c6asOkiEfCNzpjub2m_HA" supplier="_3c7BwOkiEfCNzpjub2m_HA" contract="_3c7BwOkiEfCNzpjub2m_HA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3hv3YOkiEfCNzpjub2m_HA" name="Person" specification="_3hbuUOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    this.name = name;&#xD;
+    this.age = age;&#xD;
+    this.id = id;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3h3zMOkiEfCNzpjub2m_HA" name="getPersonDetails" specification="_3hy6sOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return &quot;Name: &quot; + name + &quot;, Age: &quot; + age + &quot;, ID: &quot; + id;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3h8rsekiEfCNzpjub2m_HA" name="getName" specification="_3h6PcOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return name;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3h_H8OkiEfCNzpjub2m_HA" name="getAge" specification="_3h9SwOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return age;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3iEAcOkiEfCNzpjub2m_HA" name="getIdentificationNumber" specification="_3iBkMOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return id;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3hbuUOkiEfCNzpjub2m_HA" name="Person" visibility="public" method="_3hv3YOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3hlfUOkiEfCNzpjub2m_HA" name="name" type="_3dDkoekiEfCNzpjub2m_HA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3hsNAOkiEfCNzpjub2m_HA" name="age" type="_3hTLcekiEfCNzpjub2m_HA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3hupQOkiEfCNzpjub2m_HA" name="id" type="_3dDkoekiEfCNzpjub2m_HA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3hy6sOkiEfCNzpjub2m_HA" name="getPersonDetails" visibility="public" method="_3h3zMOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3h2lEOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3h6PcOkiEfCNzpjub2m_HA" name="getName" visibility="public" method="_3h8rsekiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3h8rsOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3h9SwOkiEfCNzpjub2m_HA" name="getAge" visibility="public" method="_3h_H8OkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3h950OkiEfCNzpjub2m_HA" type="_3hTLcekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3iBkMOkiEfCNzpjub2m_HA" name="getIdentificationNumber" visibility="public" method="_3iEAcOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3iCyUOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_3c7BwOkiEfCNzpjub2m_HA" name="PersonInfo" visibility="public">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3iIR4OkiEfCNzpjub2m_HA" name="getPersonDetails" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3iKHEOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_3iNxcOkiEfCNzpjub2m_HA" name="Student" visibility="public">
+            <generalization xmi:type="uml:Generalization" xmi:id="_3iO_kOkiEfCNzpjub2m_HA" general="_3c6asOkiEfCNzpjub2m_HA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3idpEOkiEfCNzpjub2m_HA" name="Student" specification="_3iRb0OkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    super(name, age, generateId());&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3ihTcOkiEfCNzpjub2m_HA" name="generateId" specification="_3ifeQOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    int number = new Random().nextInt(1, 1000);&#xD;
+    return &quot;S_&quot; + number;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3iRb0OkiEfCNzpjub2m_HA" name="Student" visibility="public" method="_3idpEOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3iZXoOkiEfCNzpjub2m_HA" name="name" type="_3dDkoekiEfCNzpjub2m_HA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3ibz4OkiEfCNzpjub2m_HA" name="age" type="_3hTLcekiEfCNzpjub2m_HA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3ifeQOkiEfCNzpjub2m_HA" name="generateId" visibility="private" isStatic="true" method="_3ihTcOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3igsYOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_3ijvsOkiEfCNzpjub2m_HA" name="Teacher" visibility="public">
+            <generalization xmi:type="uml:Generalization" xmi:id="_3ikWwOkiEfCNzpjub2m_HA" general="_3c6asOkiEfCNzpjub2m_HA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3ixyIOkiEfCNzpjub2m_HA" name="Teacher" specification="_3inaEOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    super(name, age, generateId());&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3i34wOkiEfCNzpjub2m_HA" name="generateId" specification="_3i0OYOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    int number = new Random().nextInt(1, 10);&#xD;
+    return &quot;T_&quot; + number;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3inaEOkiEfCNzpjub2m_HA" name="Teacher" visibility="public" method="_3ixyIOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3ivV4OkiEfCNzpjub2m_HA" name="name" type="_3dDkoekiEfCNzpjub2m_HA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3iwkAOkiEfCNzpjub2m_HA" name="age" type="_3hTLcekiEfCNzpjub2m_HA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3i0OYOkiEfCNzpjub2m_HA" name="generateId" visibility="private" isStatic="true" method="_3i34wOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3i2DkOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_3i6VAOkiEfCNzpjub2m_HA" name="demo2">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3i8xQOkiEfCNzpjub2m_HA" name="ProfessionClassAdapter" visibility="public">
+            <generalization xmi:type="uml:Generalization" xmi:id="_3i_NgOkiEfCNzpjub2m_HA" general="_3i-mcOkiEfCNzpjub2m_HA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_3jAboOkiEfCNzpjub2m_HA" client="_3i8xQOkiEfCNzpjub2m_HA" supplier="_3c7BwOkiEfCNzpjub2m_HA" contract="_3c7BwOkiEfCNzpjub2m_HA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jKMoekiEfCNzpjub2m_HA" name="ProfessionClassAdapter" specification="_3jBpwOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    super(name, age);&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jMB0OkiEfCNzpjub2m_HA" name="getPersonDetails" specification="_3jKzsOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    // delegate to adaptee behavior&#xD;
+    return getProfessionDetails();&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jBpwOkiEfCNzpjub2m_HA" name="ProfessionClassAdapter" visibility="public" method="_3jKMoekiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jIXcOkiEfCNzpjub2m_HA" name="name" type="_3dDkoekiEfCNzpjub2m_HA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jKMoOkiEfCNzpjub2m_HA" name="age" type="_3hTLcekiEfCNzpjub2m_HA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jKzsOkiEfCNzpjub2m_HA" name="getPersonDetails" visibility="public" method="_3jMB0OkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jLawOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_3i9YUOkiEfCNzpjub2m_HA" name="external">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3i-mcOkiEfCNzpjub2m_HA" name="Musician" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3jSIcOkiEfCNzpjub2m_HA" name="name" visibility="private" isLeaf="true" type="_3dDkoekiEfCNzpjub2m_HA" isUnique="false"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3jTWkOkiEfCNzpjub2m_HA" name="age" visibility="private" isLeaf="true" type="_3hTLcekiEfCNzpjub2m_HA" isUnique="false"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3jWZ4OkiEfCNzpjub2m_HA" name="occupation" visibility="private" isLeaf="true" type="_3dDkoekiEfCNzpjub2m_HA" isUnique="false"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_3jQTQOkiEfCNzpjub2m_HA" client="_3i-mcOkiEfCNzpjub2m_HA" supplier="_3jPsMOkiEfCNzpjub2m_HA" contract="_3jPsMOkiEfCNzpjub2m_HA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jhZAOkiEfCNzpjub2m_HA" name="Musician" specification="_3jY2IOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    this.name = name;&#xD;
+    this.age = age;&#xD;
+    this.occupation = &quot;Musician&quot;;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jkcUOkiEfCNzpjub2m_HA" name="getName" specification="_3jjOMOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return name;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jlDYekiEfCNzpjub2m_HA" name="getAge" specification="_3jkcUekiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return age;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jmRgOkiEfCNzpjub2m_HA" name="getProfessionDetails" specification="_3jlqcOkiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return &quot;Name: &quot; + name + &quot;, Age: &quot; + age + &quot;, Occupation: &quot; + occupation;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3jnfoekiEfCNzpjub2m_HA" name="getHobby" specification="_3jmRgekiEfCNzpjub2m_HA">
+              <language>JAVA</language>
+              <body>&#xD;
+    return &quot;playing with music&quot;;&#xD;
+</body>
+            </ownedBehavior>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jY2IOkiEfCNzpjub2m_HA" name="Musician" visibility="public" method="_3jhZAOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3je8wOkiEfCNzpjub2m_HA" name="name" type="_3dDkoekiEfCNzpjub2m_HA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jgK4OkiEfCNzpjub2m_HA" name="age" type="_3hTLcekiEfCNzpjub2m_HA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jjOMOkiEfCNzpjub2m_HA" name="getName" visibility="public" method="_3jkcUOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jj1QOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jkcUekiEfCNzpjub2m_HA" name="getAge" visibility="public" method="_3jlDYekiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jlDYOkiEfCNzpjub2m_HA" type="_3hTLcekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jlqcOkiEfCNzpjub2m_HA" name="getProfessionDetails" visibility="public" method="_3jmRgOkiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jlqcekiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jmRgekiEfCNzpjub2m_HA" name="getHobby" visibility="public" method="_3jnfoekiEfCNzpjub2m_HA">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jnfoOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_3jPsMOkiEfCNzpjub2m_HA" name="Profession" visibility="public">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jp74OkiEfCNzpjub2m_HA" name="getName" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jrKAOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jsYIOkiEfCNzpjub2m_HA" name="getAge" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3js_MOkiEfCNzpjub2m_HA" type="_3hTLcekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3juNUOkiEfCNzpjub2m_HA" name="getProfessionDetails" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jvbcOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_3jwpkOkiEfCNzpjub2m_HA" name="getHobby" visibility="private">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_3jx3sOkiEfCNzpjub2m_HA" type="_3dDkoekiEfCNzpjub2m_HA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3dCWgOkiEfCNzpjub2m_HA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_3dC9kOkiEfCNzpjub2m_HA" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_3dDkoOkiEfCNzpjub2m_HA" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3dDkoekiEfCNzpjub2m_HA" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3hR9UOkiEfCNzpjub2m_HA" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_3hTLcOkiEfCNzpjub2m_HA" name="primitivetype">
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3hTLcekiEfCNzpjub2m_HA" name="Integer"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3bSDAOkiEfCNzpjub2m_HA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3bWUcOkiEfCNzpjub2m_HA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3b5uEOkiEfCNzpjub2m_HA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3b68MOkiEfCNzpjub2m_HA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3cHwgOkiEfCNzpjub2m_HA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3cIXkOkiEfCNzpjub2m_HA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:External xmi:id="_3g_pcOkiEfCNzpjub2m_HA" name="java.lang.String" base_Classifier="_3dDkoekiEfCNzpjub2m_HA"/>
+  <standard:Create xmi:id="_3hjDEOkiEfCNzpjub2m_HA" base_BehavioralFeature="_3hbuUOkiEfCNzpjub2m_HA"/>
+  <standard:Create xmi:id="_3iVGMOkiEfCNzpjub2m_HA" base_BehavioralFeature="_3iRb0OkiEfCNzpjub2m_HA"/>
+  <standard:Create xmi:id="_3irEcOkiEfCNzpjub2m_HA" base_BehavioralFeature="_3inaEOkiEfCNzpjub2m_HA"/>
+  <standard:Create xmi:id="_3jFUIOkiEfCNzpjub2m_HA" base_BehavioralFeature="_3jBpwOkiEfCNzpjub2m_HA"/>
+  <standard:Create xmi:id="_3jcggOkiEfCNzpjub2m_HA" base_BehavioralFeature="_3jY2IOkiEfCNzpjub2m_HA"/>
+</xmi:XMI>
