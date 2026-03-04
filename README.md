@@ -1,6 +1,6 @@
 # The Structural Design Toolkit for Java Source Code
 
-This repository accompanies [*The Structural Design Toolkit for Java*](https://www.amazon.com/dp/B0GMKZD9NY) by Vaskaran Sarcar.
+This repository accompanies [*The Structural Design Toolkit for Java*](https://www.amazon.com/dp/B0GMKZD9NY) by Vaskaran Sarcar (2026).
 
 [comment]: #cover
 ![Cover image](Cover_short_SDT_Java_ebook.jpg)
