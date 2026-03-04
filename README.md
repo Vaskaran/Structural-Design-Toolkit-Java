@@ -3,8 +3,7 @@
 This repository accompanies [*The Structural Design Toolkit for Java*](https://www.amazon.com/dp/B0GMKZD9NY) by Vaskaran Sarcar.
 
 [comment]: #cover
-![Cover image](ShortCover_SDT_Java_ebook.jpg)
-<img src="Cover_short_SDT_Java.JPG" alt="Book cover" style="width:300px;">
+![Cover image](Cover_short_SDT_Java_ebook.jpg)
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
 
 ## Releases
